@@ -15,7 +15,7 @@
 </head>
 <body>
 <h1>Setsheet Privacy Policy</h1>
-<p class="date">Last updated: October 23, 2026</p>
+<p class="date">Last updated: October 23, 2026, 10:45 p.m. China time</p>
 
 <p>Setsheet is a workout log for iPhone. In short: <strong>your data stays on your iPhone, and we don't collect, see or share any of it.</strong> The one exception is an optional AI coach that is off by default; if you turn it on, your data goes from your iPhone directly to the AI provider you choose, never through us. See “Optional AI coach” below.</p>
 
@@ -23,15 +23,24 @@
 <p>Your plans, routines, workouts, personal records, body weight entries and settings are saved in a file inside the app on your device. They are included in your normal iPhone backups (iCloud or computer) if you have those turned on, under your own Apple account.</p>
 
 <h2>What we collect</h2>
-<p>Nothing. Setsheet has no account, no login, no analytics, no advertising and no tracking. The app does not send your data to us. Unless you turn on the optional AI coach, it does not send your data to anyone else and does not make network requests.</p>
+<p>Nothing. Setsheet has no account, no login, no analytics, no advertising and no tracking. The app does not send your data to us. Optional AI coach setup and use make requests directly to the provider you choose. During setup, “List models” can contact that provider with your API key before you agree to share training data; that request contains no training data.</p>
 
 <h2>Optional AI coach</h2>
-<p>Setsheet includes an optional AI coach that can suggest or adjust training plans and answer questions about your training. It is <strong>off by default</strong> and does nothing until you set it up and agree.</p>
+<p>Setsheet includes an optional AI coach that can suggest or adjust training plans and answer questions about your training. It is <strong>off by default</strong>. It sends training data only after you set it up and agree.</p>
 <ul>
 <li><strong>Your own provider and key.</strong> You choose the AI service (for example a major cloud AI provider, a service with an OpenAI-compatible interface, or a model running on your own computer) and enter your own API key. We do not provide a key or a service.</li>
-<li><strong>The key stays on your iPhone.</strong> It is stored in the iOS Keychain on this device only. It is not included in backups, exports, logs or in anything sent to us, and you can remove it in Settings at any time.</li>
-<li><strong>Only with your explicit consent.</strong> Before anything is sent, the app shows what will be shared and asks for your agreement. You can withdraw it in Settings, which stops all sending.</li>
-<li><strong>What is sent.</strong> Only a fixed, limited set of training information needed for the request: your plan and routines, the exercises, sets, reps and weights you logged, body weight and goal, the answers you give in the coach questionnaire, and the messages you type to the coach. It is labelled with a random alias instead of your identity. We do not send your name, email, contacts, photos, location or device identifiers.</li>
+<li><strong>Where the key is kept.</strong> It is stored in the iOS Keychain on this device only. It is used as a credential in requests to your chosen provider, including “List models”; it is not included in the app’s exported JSON backups, its logs, or anything sent to us. An encrypted full-iPhone backup may include this device-only Keychain item for restoration to the same iPhone. You can remove the key in Settings at any time.</li>
+<li><strong>Consent and turning the coach off.</strong> Before any training data is sent, the app shows what it will share and asks for your agreement. In Settings you can turn the coach off, which removes its saved key and pending suggestions and stops new training-data requests. The app retains your earlier consent choice, so turning the coach back on does not ask you to agree again.</li>
+<li><strong>What is sent.</strong> The request contains a fixed set of fields selected for the task, labelled with a random alias instead of your identity:
+  <ul>
+    <li>Your plan: routine names and icons, exercises and their modes, sets, reps, durations, cardio speed and weights, progression rules and targets, and which routines are scheduled on each weekday.</li>
+    <li>Your coach questionnaire answers: goal, experience, preferred training days and session length, equipment, limitations, likes, dislikes and notes. If you leave the coach’s equipment answer empty, the app may use your active equipment filter.</li>
+    <li>For a training review or workout debrief: relevant workout dates, names, durations, ratings, notes you wrote (up to 500 characters each), personal-record counts, exercise targets and logged sets (weights, reps, time, cardio minutes and speed, effort ratings, and warm-up or failure flags); dated body-weight entries and your goal weight. A review includes up to 12 weeks and 60 workouts; a debrief includes the selected workout and up to three earlier workouts with the same name. The request can also contain summaries derived from your workout history, such as training frequency, body-part coverage, exercise progress and best working weights.</li>
+    <li>For a new plan or training review, exercise names and body parts from a limited catalogue selection, including the names and body parts of exercises you created; for a new plan, your workout count, earliest workout date and best working weights may also be sent.</li>
+    <li>Your current message or plan-revision request; when revising a coach plan, the previous coach plan; up to six recent chat lines, including your messages and the coach’s earlier replies (up to 240 characters per line); and up to 15 suggestions you declined, with their types and reasons.</li>
+    <li>Your weight unit, app language, effort scale (RIR, RPE or none) and today’s date.</li>
+  </ul>
+  The app does not read your name, email, contacts, photos, location or device identifiers for this request. Text you choose to enter in notes, questionnaire answers or messages may contain personal details.</li>
 <li><strong>Directly from your device.</strong> The data goes straight from your iPhone to the provider you chose. It does not pass through any server of ours. We do not receive, store, or have access to it, or to the coach's replies.</li>
 <li><strong>The provider's policy applies.</strong> Once the provider receives the data, they handle it under their own terms and privacy policy (for example whether they retain it or use it to train models). Please read their policy before you agree. If you want to keep everything on your own hardware, choose a model running on your own computer.</li>
 </ul>
@@ -47,7 +56,7 @@
 <p>The app does not collect personal information from anyone, including children. The optional AI coach is intended for adults who bring their own API key.</p>
 
 <h2>Deleting your data</h2>
-<p>Deleting the app removes all of its data, including the saved API key, from your iPhone. Data you previously sent to an AI provider is held by that provider; to have it deleted, contact them.</p>
+<p>Deleting the app removes its workout data from your iPhone. iOS may retain a Keychain item after the app is deleted; on the first launch after a fresh installation, Setsheet deletes any API key left by an earlier installation. You can remove the key immediately by turning the coach off before deleting the app. Data you previously sent to an AI provider is held by that provider; to have it deleted, contact them.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the new version will be posted on this page with a new date.</p>
@@ -58,20 +67,29 @@
 <hr>
 
 <h1 lang="zh-Hans">Setsheet 隐私政策</h1>
-<p class="date">更新日期：2026 年 10 月 23 日</p>
+<p class="date">更新日期：2026 年 10 月 23 日 22:45（北京时间）</p>
 <div lang="zh-Hans">
 <p>Setsheet 是一个 iPhone 上的训练记录 App。简单说：<strong>你的数据只存在你的 iPhone 上，我们不收集、看不到，也不会分享。</strong>唯一的例外是默认关闭的可选 AI 教练：你打开之后，数据会从你的 iPhone 直接发给你自己选的 AI 服务商，不经过我们。见下文「可选的 AI 教练」。</p>
 <h2>App 保存什么</h2>
 <p>计划、训练日、训练记录、个人纪录、体重和设置，都保存在本机 App 内的一个文件里。如果你开了 iPhone 备份（iCloud 或电脑），它们会随你自己的 Apple 账户一起备份。</p>
 <h2>我们收集什么</h2>
-<p>什么都不收集。没有账户、没有登录、没有统计分析、没有广告、没有追踪。App 不会把你的数据发给我们。除非你打开可选的 AI 教练，否则也不会发给任何人，不发起网络请求。</p>
+<p>什么都不收集。没有账户、没有登录、没有统计分析、没有广告、没有追踪。App 不会把你的数据发给我们。设置或使用可选 AI 教练时，App 会直接请求你选择的服务商。设置时，「列出模型」可以在你同意分享训练数据之前，携带你的 API Key 请求服务商；这次请求不包含训练数据。</p>
 <h2>可选的 AI 教练</h2>
-<p>Setsheet 带有一个可选的 AI 教练，可以建议或调整训练计划、回答训练问题。它<strong>默认关闭</strong>，你设置并同意之前什么都不会发生。</p>
+<p>Setsheet 带有一个可选的 AI 教练，可以建议或调整训练计划、回答训练问题。它<strong>默认关闭</strong>；只有在你完成设置并同意后，才会发送训练数据。</p>
 <ul>
 <li><strong>你自己的服务商和 Key。</strong>AI 服务由你选（例如主流云端 AI 服务、兼容 OpenAI 接口的服务，或跑在你自己电脑上的模型），API Key 也由你自己填。我们不提供 Key，也不提供服务。</li>
-<li><strong>Key 只存在你的 iPhone 上。</strong>它保存在本机 iOS 钥匙串里，不进备份、不进导出文件、不进日志，也不会发给我们；你可以随时在设置里删除。</li>
-<li><strong>只在你明确同意后。</strong>发送任何数据之前，App 会说明将分享什么并征求你的同意。你可以在设置里撤回，撤回后不再发送。</li>
-<li><strong>发送什么。</strong>只发送完成这次请求所需的一组固定、有限的训练信息：计划和训练日、你记录的动作、组数、次数和重量、体重和目标、你在教练问卷里的回答，以及你发给教练的消息。数据用随机化名标识，而不是你的身份。我们不发送你的姓名、邮箱、通讯录、照片、位置或设备标识。</li>
+<li><strong>Key 存在哪里。</strong>它保存在仅限本机的 iOS 钥匙串里，作为凭据用于请求你选择的服务商，包括「列出模型」；它不进入 App 导出的 JSON 备份、日志，也不会发给我们。iPhone 的加密整机备份可能包含这个仅限本机的钥匙串条目，供恢复到同一台 iPhone。你可以随时在设置里删除 Key。</li>
+<li><strong>同意与关闭教练。</strong>发送训练数据之前，App 会说明将分享什么并征求你的同意。在设置里关闭教练会删除保存的 Key 和待处理建议，并停止发起新的训练数据请求。App 会保留你之前的同意记录，因此重新打开教练时不会再次征求同意。</li>
+<li><strong>发送什么。</strong>每次请求只包含为该任务选定的固定字段，以随机化名标识，而不是你的身份：
+  <ul>
+    <li>你的计划：训练日名称和图标、动作及其模式、组数、次数、时长、有氧速度和重量、进阶规则与目标，以及每周各天安排的训练日。</li>
+    <li>教练问卷的回答：目标、经验、偏好的训练日和每次训练时长、器材、限制、喜好、不喜欢的项目和备注。如果你没有填写教练问卷里的器材，App 可能使用当前启用的器材筛选设置。</li>
+    <li>复盘或单次训练点评所需的记录：训练日期、名称、时长、评分、你写的备注（每条最多 500 字）、个人纪录数量、动作目标和每组记录（重量、次数、用时、有氧分钟与速度、RIR/RPE 用力程度、热身或力竭标记）；带日期的体重记录和目标体重。复盘最多读取最近 12 周、60 次训练；单次点评读取当次及之前最多 3 次同名训练。请求还可能包含从训练历史算出的汇总，如训练频率、训练部位覆盖、动作进展和最佳训练重量。</li>
+    <li>生成新计划或复盘时，动作库选取部分动作的名称和部位，包括你自建动作的名称和部位；生成新计划时，还可能发送训练总次数、最早训练日期和最佳训练重量。</li>
+    <li>你当前发的消息或修改计划的要求；修改计划时教练上一版计划；最近最多 6 条对话，包括你的消息和教练之前的回复（每条最多 240 字）；以及你拒绝过的最多 15 条建议的类型和理由。</li>
+    <li>重量单位、App 语言、用力程度记法（RIR、RPE 或不记录）和今天的日期。</li>
+  </ul>
+  App 不会为这次请求读取你的姓名、邮箱、通讯录、照片、位置或设备标识。但你主动填写的备注、问卷回答或消息可能包含个人信息。</li>
 <li><strong>从设备直接发送。</strong>数据从你的 iPhone 直接发到你选的服务商，不经过我们的任何服务器。我们不接收、不存储，也看不到这些数据和教练的回复。</li>
 <li><strong>适用服务商自己的政策。</strong>服务商收到数据后，按它自己的条款和隐私政策处理（比如是否保留、是否用于训练模型）。同意之前请先读它的政策。想让数据完全留在自己设备上，可以选跑在你自己电脑上的模型。</li>
 </ul>
@@ -81,7 +99,7 @@
 <h2>通知</h2>
 <p>如果你允许通知，App 会在本机安排休息倒计时和训练提醒的本地通知，不经过任何服务器。</p>
 <h2>删除数据</h2>
-<p>删除 App 即删除它在你 iPhone 上的全部数据，包括保存的 API Key。之前已经发给 AI 服务商的数据由该服务商持有，需要删除请联系它。</p>
+<p>删除 App 会从 iPhone 上移除它的训练数据。iOS 在删除 App 后可能仍保留钥匙串条目；重新安装后第一次启动时，Setsheet 会删除上次安装留下的 API Key。你也可以在删除 App 之前先关闭教练，立即删除 Key。之前已经发给 AI 服务商的数据由该服务商持有，需要删除请联系它。</p>
 <h2>联系</h2>
 <p><a href="mailto:857377735@qq.com">857377735@qq.com</a></p>
 </div>
